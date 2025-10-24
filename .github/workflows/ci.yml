@@ -33,10 +33,10 @@ jobs:
         run: composer install --no-progress --no-interaction --prefer-dist
 
       - name: PHPUnit
-        run: vendor/bin/phpunit
+        run: vendor/bin/phpunit --colors=never
 
       - name: PHPStan
-        run: vendor/bin/phpstan analyse
+        run: vendor/bin/phpstan analyse --no-progress --no-interaction --no-ansi
 
       - name: PHP-CS-Fixer
-        run: vendor/bin/php-cs-fixer check
+        run: vendor/bin/php-cs-fixer check --show-progress=none --no-ansi

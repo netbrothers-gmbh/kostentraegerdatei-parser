@@ -1,3 +1,5 @@
+![CI Status](https://github.com/netbrothers-gmbh/kostentraegerdatei-parser/actions/workflows/ci.yml/badge.svg)
+
 # NetBrothers Kostenträgerdatei Parser
 
 A small PHP library and CLI for parsing GKV "Kostenträgerdateien", files

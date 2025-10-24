@@ -5,6 +5,7 @@ $finder = (new PhpCsFixer\Finder())
     ->exclude('ignore');
 
 return (new PhpCsFixer\Config())
+	->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
     ->setRiskyAllowed(true)
     ->setRules([
         '@Symfony' => true, // https://cs.symfony.com/doc/ruleSets/Symfony.html
