@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+use NetBrothers\KostentraegerParser\Command\SonstigeParserCommand;
+use Symfony\Component\Console\Application;
+
+/**
+ * `__DIR__` represents `<project_dir>/vendor/netbrothers-gmbh/kostentraegerdatei-parser/bin`,
+ * such that the three `/..` will neutralise `/netbrothers-gmbh/kostentraegerdatei-parser/bin`
+ * and yield the project's `vendor` directory.
+ */
+
+$libModeAutoload = __DIR__ . '/../../../autoload.php';
+
+if (file_exists($libModeAutoload)) {
+    // used as a binary script of a composer package (vendor/bin/kostentraeger-parser)
+    require $libModeAutoload;
+} else {
+    // used entirely standalone (e.g. git clone)
+    require __DIR__ . '/../vendor/autoload.php';
+}
+
+$cliApp = new Application;
+$cliApp->setName('NetBrothers GmbH - Kostenträgerdatei-Parser SGB V');
+$cliApp->setVersion('1.0.0');
+$parserCmd = new SonstigeParserCommand();
+$cliApp->add($parserCmd);
+$cliApp->setDefaultCommand($parserCmd->getName(), true);
+$cliApp->run();

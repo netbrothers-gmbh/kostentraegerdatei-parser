@@ -1,0 +1,38 @@
+{
+    "name": "netbrothers-gmbh/kostentraegerdatei-parser",
+    "description": "Parser for GKV Kostenträgerdateien",
+    "type": "library",
+    "bin": [
+        "bin/kostentraeger-pflege",
+        "bin/kostentraeger-sonstige"
+    ],
+    "require": {
+        "sabas/edifact": "^1.2",
+        "php": "^8.3",
+        "symfony/polyfill-php84": "^1.33",
+        "symfony/console": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12",
+        "phpstan/phpstan": "^2",
+        "friendsofphp/php-cs-fixer": "^3.89",
+        "symfony/var-dumper": "^7"
+    },
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "NetBrothers\\KostentraegerParser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NetBrothers\\KostentraegerParser\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thilo Ratnaweera",
+            "email": "thilo.ratnaweera@netbrothers.de"
+        }
+    ]
+}
