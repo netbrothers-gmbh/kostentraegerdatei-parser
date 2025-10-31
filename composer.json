@@ -7,16 +7,16 @@
         "bin/kostentraeger-sonstige"
     ],
     "require": {
-        "sabas/edifact": "^1.2",
+        "sabas/edifact": "^1.3.0",
         "php": "^8.3",
-        "symfony/polyfill-php84": "^1.33",
-        "symfony/console": "^7.3"
+        "symfony/polyfill-php84": "^1.33.0",
+        "symfony/console": "^7.3.5"
     },
     "require-dev": {
-        "phpunit/phpunit": "^12",
-        "phpstan/phpstan": "^2",
-        "friendsofphp/php-cs-fixer": "^3.89",
-        "symfony/var-dumper": "^7"
+        "phpunit/phpunit": "^12.4.2",
+        "phpstan/phpstan": "^2.1.31",
+        "friendsofphp/php-cs-fixer": "^3.89.1",
+        "symfony/var-dumper": "^7.3.5"
     },
     "license": "LGPL-3.0-or-later",
     "autoload": {
